@@ -1,4 +1,4 @@
-# Document-structur-
+# Document-structuré
 Projet de M2, semestre 2 en document structuré
 
 Le projet a été inspiré de: https://github.com/Chema22R/interactive-fiction-engine
