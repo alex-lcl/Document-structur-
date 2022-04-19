@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE world SYSTEM "FR_Alexandra.dtd">
+<!-- Alexandra LI COMBEAU LONGUET -->
+<world>
+	<player scene="scene00"/>
+	<scenes>
+	<!-- scènes déjà pérsentes -->
+		<scene id="scene00" x="0" y="0" numPath="3" numObjects="1" numCreature="0" msj="Tu es dans une cuisine, avec une boite sur la cuisinière et trois portes: une porte à l'Est, une porte à l'Ouest et une porte au Sud (marquée d'une croix). Il y a un tableau accroché au mur.">
+			<action id="scene00" x="50" y="50" dest="object00" msj="Ouvrir la boite."/>
+			<action id="scene00" x="30" y="30" dest="object00a" msj="Voir les inscriptions sur le tableau"/>
+			<action id="scene00" x1="95" y1="10" x2="95" y2="80" dest="path00" msj="Porte 1: aller à l'Est."/>
+			<action id="scene00" x1="5" y1="10" x2="5" y2="80" dest="path01" msj="Porte 2: aller à l'Ouest."/>
+			<action id="scene00" x1="10" y1="95" x2="80" y2="95" dest="path02" msj="Porte 3: aller au Sud"/>
+		</scene>
+		<scene id="scene01" x="100" y="0" numPath="3" numObjects="2" numCreature="0" msj="Tu es dans ce qui semble être un salon. Il y a  un porte revue, une table et trois portes: une porte au Nord, une porte à l'Est, et une porte à l'ouest.">
+			<action id="scene01" x="150" y="50" dest="object01" msj="Aller voir le porte revue."/>
+			<action id="scene01" x="130" y="30" dest="object02" msj="Aller voir la table."/>
+			<action id="scene01" x1="195" y1="10" x2="195" y2="80" dest="path03" msj="Porte 4: aller à l'Est."/>
+			<action id="scene01" x1="105" y1="10" x2="105" y2="80" dest="path00" msj="Porte 1: aller à l'Ouest."/>
+			<action id="scene01" x1="110" y1="95" x2="180" y2="95" dest="path04" msj="Porte 5: aller au Sud."/>
+		</scene>
+		<scene id="scene02" x="0" y="100" numPath="3" numObjects="1" numCreature="0" msj="Tu es dans une petite pièce, l'air y est plus frais. Il y a une boite et trois portes: une porte au Nord, une porte à l'Est et une porte à l'Ouest.">
+			<action id="scene02" x="50" y="150" dest="object03" msj="Ouvrir la boite."/>
+			<action id="scene02" x1="10" y1="105" x2="80" y2="105" dest="path02" msj="Porte 3: aller au Nord."/>
+			<action id="scene02" x1="95" y1="110" x2="95" y2="180" dest="path05" msj="Porte 6: aller à l'Est."/>
+			<action id="scene02" x1="5" y1="110" x2="5" y2="180" dest="path06" msj="Porte 7: aller à l'Ouest."/>
+		</scene>
+		<scene id="scene03" x="100" y="100" numPath="3" numObjects="0" numCreature="1" msj="Tu es dans une pièce sombre, avec peu d'oxygène. Il y a un portrait acrroché au mur, deux portes (une porte au Nord et une porte à l'Ouest), et un escalier qui descend à la cave.">
+			<action id="scene03" x="130" y="130" dest="creature01" msj="Aller voir le portrait."/>
+			<action id="scene03" x1="110" y1="105" x2="180" y2="105" dest="path04" msj="Porte 5: aller au Nord."/>
+			<action id="scene03" x1="105" y1="110" x2="105" y2="180" dest="path05" msj="Porte 6: aller à l'Ouest."/>
+            <action id="scene03" x1="110" y1="195" x2="180" y2="195" dest="path07" msj="Escalier A: descendre à la cave"/>
+		</scene>
+		<scene id="final" numPath="0" numObjects="0" numCreature="0" msj="Fin du jeu, tu as gagné(e), félicitation !!"/>
+		<!-- scènes ajoutés-->
+        <scene id="scene04" x="100" y="100" numPath="3" numObjects="1" numCreature="0" msj="Tu es dans une cave humide. Il y a une manivelle, une porte et deux escaliers.">
+			<action id="scene04" x="130" y="130" dest="object05" msj="Actionner la manivelle."/>
+			<action id="scene04" x1="105" y1="110" x2="105" y2="180" dest="path08" msj="Porte 8: aller à l'Ouest."/> <!-- Cette porte ramène au début -->
+            <action id="scene04" x1="110" y1="105" x2="180" y2="105" dest="path07" msj="Escalier A: monter à l'étage."/>
+			<action id="scene04" x1="195" y1="110" x2="195" y2="180" dest="path09" msj="Escalier B: monter vers l'extérieur."/>
+		</scene>
+		<scene id="scene05" x="220" y="100" numPath="3" numObjects="0" numCreature="1" msj="Tu es dans un jardin. Il y a un escalier menant à la maison, une rivière agitée traversable par un pont, un sentier en terres battues, ainsi qu'un lutin.">
+			<action id="scene05" x="250" y="150" dest="creature02" msj="Aller voir le lutin."/>
+			<action id="scene05" x1="225" y1="110" x2="225" y2="180" dest="path09" msj="Escalier B: escaliers menant à l'intérieur."/>
+			<action id="scene05" x1="235" y1="195" x2="300" y2="195" dest="path10" msj="Prendre le sentier allant vers le Sud."/>
+            <action id="scene05" x1="315" y1="110" x2="315" y2="180" dest="path11" msj="Prendre le pont allant à l'Est."/>
+		</scene>
+		<scene id="scene06" x="220" y="200"  numPath="3" numObjects="1" numCreature="0" msj="Tu te trouves désormais devant un embranchement: il y a un lac et un sentier. Une affiche est clouée sur un arbre.">
+			<action id="scene06" x="250" y="250" dest="object07" msj="Aller voir l'affiche."/>
+			<action id="scene06" x1="235" y1="295" x2="300" y2="295" dest="path12" msj="Aller vers le lac au Sud."/>
+			<action id="scene06" x1="235" y1="205" x2="300" y2="205" dest="path10" msj="Prendre le sentier allant vers le Nord."/>
+            <action id="scene06" x1="225" y1="210" x2="225" y2="280" dest="path13" msj="Prendre le sentier allant à l'Ouest."/>
+		</scene>
+		<scene id="scene07" x="0" y="210" numPath="2" numObjects="1" numCreature="0" msj="Tu te trouves devant la maison que tu as quitté il y a quelques minutes. Il y a un message sur la porte.">
+			<action id="scene07" x="15" y="250" dest="object08" msj="Lire le message sur la porte."/>
+			<action id="scene07" x1="5" y1="220" x2="5" y2="300" dest="path14" msj="Ouvrir la porte au Nord Ouest."/>
+			<action id="scene07" x1="215" y1="220" x2="215" y2="300" dest="path13" msj="Prendre le sentier allant à l'Est."/>
+		</scene>
+	</scenes>
+	<props>
+	<!-- chemins déjà présents -->
+		<prop id="path00" kind="path" state="False" scene01="scene00" scene02="scene01">
+			<action condition="open" msj="La porte est ouverte, tu l'as traversé(e)."/>
+			<action condition="closed" msj="La porte est fermée, il faut une clef."/>
+		</prop>
+		
+		<prop id="path01" kind="path" state="True" scene01="scene00" scene02="scene00">
+			<action condition="open" msj="Tu as ouvert la porte, mais il y a un mur derrière."/>
+			<action condition="closed" msj="La porte est fermée, il faut une clef."/>
+		</prop>
+		
+		<prop id="path02" kind="path" state="False" scene01="scene00" scene02="scene02">
+			<action condition="open" msj="La porte est ouverte, tu l'as traversé(e)."/>
+			<action condition="closed" msj="La porte est fermée, il faut une clef."/>
+		</prop>
+		
+		<prop id="path03" kind="path" state="True" scene01="scene01" scene02="scene01">
+			<action condition="open" msj="La porte est ouverte, mais elle donne accès à une panderie: impossible de traverser."/>
+			<action condition="closed" msj="La porte est fermée, il faut une clef."/>
+		</prop>
+		
+		<prop id="path04" kind="path" state="True" scene01="scene01" scene02="scene03">
+			<action condition="open" msj="La porte est ouverte, tu l'as traversé(e)"/>
+			<action condition="closed" msj="La porte est fermée, il faut une clef."/>
+		</prop>
+		
+		<prop id="path05" kind="path" state="False" scene01="scene03" scene02="scene02">
+			<action condition="open" msj="La porte est ouverte, tu l'as traversé(e)"/>
+			<action condition="closed" msj="La porte est fermée, mais elle n'a pas de serrure, étrange..."/>
+		</prop>
+		
+		<prop id="path06" kind="path" state="False" scene01="scene02" scene02="final">
+			<action condition="open" msj="La porte est ouverte, tu l'as traversé(e). Tu es sorti(e) de ce monde enchantée !"/>
+			<action condition="closed" msj="La porte est fermée, mais elle a l'air différente des autres..."/>
+		</prop>
+		<!-- chemins ajoutés -->
+        <prop id="path07" kind="path" state="True" scene01="scene03" scene02="scene04">
+			<action condition="open" msj="Tu as monté(e) les escaliers."/>
+			<action condition="closed" msj="Les escaliers sont magiques: ils ne te laissent pas monter."/>
+		</prop>
+		<prop id="path08" kind="path" state="False" scene01="scene04" scene02="scene00">
+			<action condition="open" msj="La porte est ouverte, tu l'as traversé(e)."/>
+			<action condition="closed" msj="La porte est fermée, comment l'ouvrir ?"/>
+		</prop>
+		<prop id="path09" kind="path" state="True" scene01="scene04" scene02="scene05">
+			<action condition="open" msj="Tu as descendu(e) les escaliers mennant à l'extérieur."/>
+			<action condition="closed" msj="Les escaliers sont magiques: ils ne te laissent pas descendre."/>
+		</prop>
+		<prop id="path10" kind="path" state="False" scene01="scene05" scene02="scene06">
+			<action condition="open" msj="Tu empruntes le sentier, des lucioles de montrent le chemin."/>
+			<action condition="closed" msj="La végétation prend vie ! Tu es soudainement bloqué(e) par un mur de ronces !"/>
+		</prop>
+		<prop id="path11" kind="path" state="True" scene01="scene05" scene02="final">
+			<action condition="open" msj="Le pont en bois est plus que fragile, des lattes en bois tombent dans la rivière... Tu es tombé(e)! L'eau est tellement agité que tu meurs noyé(e). Ta mort t'a fait quitté ce monde enchanté pour de bon, le petit peuple n'a pas beaucoup apprécié ce dénoument..."/>
+			<action condition="closed" msj="L'esprit de la rivière est coléreux, il ne te laisse pas traverser le pont !"/>
+		</prop>
+		<prop id="path12" kind="path" state="True" scene01="scene06" scene02="scene06">
+			<action condition="open" msj="Il n'y a pas de pont, l'eau est étrangement agité... Il vaut mieux ne pas rester ici ! "/>
+			<action condition="closed" msj="L'esprit du lac est coléreux, il ne te laisse pas traverser le lac!"/>
+		</prop>
+		<prop id="path13" kind="path" state="False" scene01="scene06" scene02="scene07">
+			<action condition="open" msj="Tu marches sur le sentier."/>
+			<action condition="closed" msj="La végétation prend vie ! Tu es soudainement bloqué(e) par un mur de ronces !"/>
+		</prop>
+		<prop id="path14" kind="path" state="True" scene01="scene07" scene02="final">
+			<action condition="open" msj="La porte est ouverte, tu l'as traversé(e). Tu es sorti(e) de ce monde enchantée !"/>
+			<action condition="closed" msj="La porte de la maison est fermée... Y a-t-il une clef quelque part ?"/>
+		</prop>
+		<!-- objets et créatures déjà présentes -->
+		<prop id="object00" kind="object" scene01="scene00" unlock="path00">
+			<action msj="La boite est ouverte: il y a une clef avec le message 'porte 1'."/>
+		</prop>
+
+		<prop id="object01" kind="object" scene01="scene01" unlock="None">
+			<action msj="Il y a une Une de journal: 'Le petit peuple, rêve ou réalité ?'."/>
+		</prop>
+		
+		<prop id="object02" kind="object" scene01="scene01" unlock="path02">
+			<action msj="Il y a un message sur la table: 'Aller là où pointe la Croix du Sud'."/>
+		</prop>
+		
+		<prop id="object03" kind="object" scene01="scene02" unlock="path06">
+			<action msj="La boite est ouverte: il y a une clef avec le message 'liberté au soleil couchant'."/>
+		</prop>
+		
+		<prop id="creature01" kind="beeing" creature="magicCreature" scene01="scene03" unlock="None">
+			<action msj="Le portrait d'une jeune femme s'anime et crie: 'TU NE SORTIRAS JAMAIS D'ICI !'"/>
+		</prop>
+		<!-- objets et créatures ajoutés -->
+		<prop id="object00a" kind="object" scene01="scene00" unlock="None">
+			<action msj="Le petit peuple est farceur... Pourras-tu sortir de ce monde enchantée ? Pour ce faire, trouve la porte d'entrée principale de la maison."/>
+		</prop>
+		<prop id="object05" kind="object" scene01="scene04" unlock="path08">
+			<action msj="Tu as actionné(e) la manivelle: la porte 8 a fait un étrange bruit."/>
+		</prop>
+		<prop id="creature02" kind="beeing" creature="littlePeople" scene01="scene05" unlock="path10">
+			<action msj="Le lutin chante une chanson : '... Le pont s'est effondré. La belle Hélène, dans la Loire est tombée. Hélas! Mon frère, me laisseras-tu noyer ? Non, non, ma sœur, je vais te retirer ! Dans l'eau se jette, et les voilà noyés !...' "/>
+		</prop>
+		<prop id="object07" kind="object" scene01="scene06" unlock="path13">
+			<action msj="Il est inscrit sur l'affiche: 'Pour voir le monstre du Lock Ness, allez au lac'."/>
+		</prop>
+		<prop id="object08" kind="object" scene01="scene07" unlock="path13">
+			<action msj="Il y a un message:'La liberté est proche, tu as juste à ouvrir la porte. Vas-tu revenir ?'."/>
+		</prop>
+	</props>
+</world>
+<!--
+DTD generated with: http://xml.mherman.org/
+Structure:
+	world
+		player [scene]
+		scenes
+			scene [id, numPath, numObjects, msj]
+				action [dest, msj] (dest is the intended recipient of the action, the prop that runs when choosing that option)
+		props
+			prop [id, type, state, scene01, scene02] (path case: type could be path or object, scene01 and scene02 are the two scenes that link that path)
+				action [condition, msj] (path case: condition could be open or closed)
+			prop [id, type, state, scene01, unlock] (object case: type could be path or object, scene01 is the scene to which the prop belongs and unlock is the prop that unlocks when executed)
+				action [msj] (object case)
+-->

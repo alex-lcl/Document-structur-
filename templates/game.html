@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Game</title>
+{% endblock %}
+
+{% block body %}
+<article id="#start">
+<h1>Game</h1>
+
+{% if next %}
+<form action="/game.html" method="POST" id="dialog">
+	<label for="dialog">{{ msj | safe }}</label>
+	{% for i in range(len) %}
+	<input type="radio" id="answer" name="answer" value="{{ i }}">{{ interactions[i].getDescription() }}<br>
+	{% endfor %}
+	<p class="toright"><button type="submit">Valider</button></p>
+</form><br/>
+<p class="tocenter"><a href="#hashLink">Ouvrir la carte</a></p>
+<div id="hashLink"><p><a href="#start">Cacher la carte</a></p>
+	<iframe src="/map.html" allowtransparency="true" width="630px" height="750px" style="margin-top:10px; border:0px;overflow: hidden;">Carte du monde </iframe>
+</div>
+{% else %}
+<form action="/game.html" method="POST" id="dialog">
+	<label for="dialog">{{ msj | safe }}</label><br>
+</form>
+<p class="tocenter"><a href="{{ url_for('main') }}">Retour à la page d'accueil</a></p>
+{% endif %}
+<!-- <form action="/game.html" method="POST" id="dialog">
+	<label for="dialog">{{ msj }}</label>
+	<input type="radio" id="story" name="story" accept="text/xml"/>
+	{% for action in actions: %}
+	<input type="radio"  value={{ action }}>
+	{% endfor %}
+	<button type="submit">Valider</button>
+</form> -->
+</article>
+{% endblock %}

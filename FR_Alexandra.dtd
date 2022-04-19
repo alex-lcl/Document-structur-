@@ -1,0 +1,42 @@
+<!ELEMENT world (player,scenes,props)>
+
+<!ELEMENT player EMPTY>
+<!ATTLIST player
+  scene CDATA #REQUIRED>
+
+<!ELEMENT scenes (scene)+>
+
+<!ELEMENT props (prop)*>
+
+<!ELEMENT scene (action)*>
+<!ATTLIST scene
+  id ID #REQUIRED
+  numPath CDATA #REQUIRED
+  numObjects CDATA #REQUIRED
+  numCreature CDATA #REQUIRED
+  msj CDATA #REQUIRED
+  x CDATA #IMPLIED
+  y CDATA #IMPLIED>
+
+<!ELEMENT prop (action)+>
+<!ATTLIST prop
+  id ID #REQUIRED
+  kind CDATA #REQUIRED
+  creature CDATA #IMPLIED
+  state CDATA #IMPLIED
+  scene01 CDATA #REQUIRED
+  scene02 CDATA #IMPLIED
+  unlock CDATA #IMPLIED>
+
+<!ELEMENT action EMPTY>
+<!ATTLIST action
+  condition CDATA #IMPLIED
+  dest CDATA #IMPLIED
+  msj CDATA #REQUIRED
+  id CDATA #IMPLIED
+  x CDATA #IMPLIED
+  y CDATA #IMPLIED
+  x1 CDATA #IMPLIED
+  x2 CDATA #IMPLIED
+  y1 CDATA #IMPLIED
+  y2 CDATA #IMPLIED>
